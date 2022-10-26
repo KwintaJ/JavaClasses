@@ -1,17 +1,9 @@
-//############################################//
-//                                            //
-//    Jan Kwinta                16.10.2022    //
-//                                            //
-//    Zadanie01: Decoder                      //
-//                                            //
-//############################################//
-
-
 /**
  * Klasa dekodera.
  */
 public class Decoder {
-    private String toOut = ""; // zmienna wynikowa
+    private StringBuilder toOut = new StringBuilder(); // zmienna wynikowa
+    private String reps = "";
     private String currentlyProcessed = ""; // wszystko co wczytalismy w aktualnie przetwarzanej sekcji danych
     private int repeatSection = -1; // licznik ile sekcji powtorzen zostalo juz wykonanych;
                                     // -1 oznacza ze jestesmy w sekcji czytania danych
@@ -28,17 +20,19 @@ public class Decoder {
 
         /* jezeli jestesmy w sekcji powtorzen */
         if(repeatSection != -1) {
-            /* dodajemy do zmiennej wynikowej wczytana sekcje danych */
-            for (int i = 0; i < value; i++) {
-                toOut += currentlyProcessed;
-            }
+
+            reps += value;
             repeatSection++;
+
             /* jezeli wykonalismy sekcje powtorzen 4 razy przechodzimy
                spowrotem do sekcji czytania danych
             */
             if(repeatSection == 4) {
+                /* dodajemy do zmiennej wynikowej wczytane dane */
+                toOut.append(String.valueOf(currentlyProcessed).repeat(Integer.parseInt(reps)));
                 currentlyProcessed = "";
                 repeatSection = -1;
+                reps = "";
             }
             return;
         }
@@ -61,7 +55,7 @@ public class Decoder {
      * @return wynik dzialania
      */
     public String output() {
-        return toOut;
+        return toOut.toString();
     }
 
     /**
@@ -72,8 +66,9 @@ public class Decoder {
            czyscimy wszystko co przeczytalismy i
            wracamy do sekcji czytania danych jezeli bylismy w sekcji powtorzen
         */
-        toOut = "";
+        toOut = new StringBuilder();
         currentlyProcessed = "";
         repeatSection = -1;
+        reps = "";
     }
 }
