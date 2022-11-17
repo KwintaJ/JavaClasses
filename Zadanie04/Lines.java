@@ -39,8 +39,6 @@ public class Lines implements LinesInterface{
         return S;
     }
 
-
-
     private boolean visitNode(Point v, Point end) {
         visited.add(v);
 
