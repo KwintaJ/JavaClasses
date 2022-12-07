@@ -4,9 +4,9 @@ Język Java
 Jan Kwinta
 ----------
 
-**Zestaw01:** Podstawy  
-**Zestaw02:** Interfejsy  
-**Zestaw03:** Rekordy  
-**Zestaw04:** Grafy  
-**Zestaw05:** Wzorzec obserwator  
-**Zestaw06:** Archivizer  
+**Zadanie01:** Decoder - Podstawy  
+**Zadanie02:** Drawing - Interfejsy  
+**Zadanie03:** Meeting - Rekordy  
+**Zadanie04:** Lines - Grafy  
+**Zadanie05:** SerwisAukcyjny - Wzorzec obserwator  
+**Zadanie06:** Kompresja - Archivizer  
