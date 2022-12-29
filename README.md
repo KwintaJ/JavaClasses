@@ -9,4 +9,5 @@ Jan Kwinta
 **Zadanie03:** Meeting - Rekordy  
 **Zadanie04:** Lines - Grafy  
 **Zadanie05:** SerwisAukcyjny - Wzorzec obserwator  
-**Zadanie06:** Kompresja - Archivizer  
+**Zadanie07:** FastHistogram - Wątki  
+**Zadanie08:** MultipleHistograms - Wątki  
